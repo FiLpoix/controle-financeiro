@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filtrar Transações por Período</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label for="mes_inicio">Mês Início:</label>
+    <input type="number" name="mes_inicio" value="1" min="1" max="12"><br>
+
+    <label for="ano_inicio">Ano Início:</label>
+    <input type="number" name="ano_inicio" value="2020"><br>
+
+    <label for="mes_fim">Mês Fim:</label>
+    <input type="number" name="mes_fim" value="12" min="1" max="12"><br>
+
+    <label for="ano_fim">Ano Fim:</label>
+    <input type="number" name="ano_fim" value="2023"><br>
+
+    <button type="submit">Filtrar</button>
+</form>
+</body>
+</html>
